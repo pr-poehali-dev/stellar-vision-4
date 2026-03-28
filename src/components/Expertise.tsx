@@ -1,30 +1,30 @@
 import { useEffect, useRef, useState } from "react"
-import { Home, Building, Armchair, Trees } from "lucide-react"
+import Icon from "@/components/ui/icon"
 import { HighlightedText } from "./HighlightedText"
 
 const expertiseAreas = [
   {
-    title: "Частные резиденции",
-    description: "Проектируем дома, в которых хочется жить. От небольшого загородного дома до масштабной виллы — каждый объект создаётся под конкретную семью и образ жизни.",
-    icon: Home,
+    title: "Пляжный отдых",
+    description: "Турция, Египет, ОАЭ, Мальдивы, Таиланд, Куба, Бали — подберём идеальный отель, рейс и систему питания под ваш бюджет и дату.",
+    icon: "Palmtree",
   },
   {
-    title: "Коммерческая архитектура",
+    title: "Деловые поездки и MICE",
     description:
-      "Офисы, торговые центры, гостиницы — создаём объекты, которые работают на бизнес: привлекают клиентов, повышают продуктивность, формируют репутацию.",
-    icon: Building,
+      "Корпоративные туры, конференции, тимбилдинг за рубежом. Организуем всё «под ключ»: перелёт, отель, трансфер, программу.",
+    icon: "Briefcase",
   },
   {
-    title: "Авторский интерьер",
+    title: "Свадьбы и медовый месяц",
     description:
-      "Дизайн интерьера как продолжение архитектуры. Разрабатываем концепцию, подбираем материалы, сопровождаем до финального результата.",
-    icon: Armchair,
+      "Романтические туры, церемонии за границей, эксклюзивные программы для двоих. Создадим незабываемое начало совместной жизни.",
+    icon: "Heart",
   },
   {
-    title: "Ландшафтное проектирование",
+    title: "Круизы и экспедиции",
     description:
-      "Участок вокруг здания — часть проекта, а не отдельная задача. Проектируем территорию так, чтобы природа и архитектура звучали в унисон.",
-    icon: Trees,
+      "Морские и речные круизы, горнолыжные туры, экотуры на Байкал и Камчатку. Для тех, кто ищет настоящие впечатления.",
+    icon: "Ship",
   },
 ]
 
@@ -59,18 +59,17 @@ export function Expertise() {
         <div className="max-w-3xl mb-20">
           <p className="text-muted-foreground text-sm tracking-[0.3em] uppercase mb-6">Наши услуги</p>
           <h2 className="text-6xl font-medium leading-[1.15] tracking-tight mb-6 text-balance lg:text-8xl">
-            <HighlightedText>Услуги</HighlightedText>, проверенные
+            <HighlightedText>Любой</HighlightedText> отдых —
             <br />
-            80+ объектами
+            под ключ
           </h2>
           <p className="text-muted-foreground text-lg leading-relaxed">
-            Мы работаем полным циклом: от первого эскиза до авторского надзора за строительством. Вы получаете единую команду и единую ответственность за результат.
+            Мы берём на себя всё: подбор тура, оформление виз и страховки, бронирование отелей, трансфер и поддержку в поездке. Вам остаётся только наслаждаться.
           </p>
         </div>
 
         <div className="grid md:grid-cols-2 gap-x-12 gap-y-16">
           {expertiseAreas.map((area, index) => {
-            const Icon = area.icon
             return (
               <div
                 key={area.title}
@@ -91,7 +90,7 @@ export function Expertise() {
                     transitionDelay: `${index * 150}ms`,
                   }}
                 >
-                  <Icon className="w-10 h-10 mb-4 text-foreground" strokeWidth={1.25} />
+                  <Icon name={area.icon} fallback="Star" size={40} className="mb-4 text-foreground" />
                 </div>
                 <h3 className="text-xl font-medium mb-4">{area.title}</h3>
                 <p className="text-muted-foreground leading-relaxed">{area.description}</p>

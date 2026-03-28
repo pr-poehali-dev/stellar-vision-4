@@ -3,23 +3,23 @@ import { HighlightedText } from "./HighlightedText"
 
 const philosophyItems = [
   {
-    title: "Свет как материал",
+    title: "Честность и прозрачность",
     description:
-      "Мы проектируем не только стены и кровли — мы проектируем то, как свет живёт внутри. Каждый проём, каждый угол создан, чтобы впускать природу.",
+      "Никаких скрытых платежей и неприятных сюрпризов. Цены, условия и детали тура — всё открыто с первой минуты общения.",
   },
   {
-    title: "Функция рождает форму",
+    title: "Индивидуальный подход",
     description:
-      "Красивое здание — это прежде всего удобное здание. Мы начинаем с вопроса «как вы будете жить здесь?» и находим ответ в архитектуре.",
+      "Каждый клиент уникален. Мы подбираем тур под ваш бюджет, интересы и ритм жизни — будь вы семья с детьми, молодожёны или корпоративная группа.",
   },
   {
-    title: "Материал с историей",
+    title: "Экспертиза в каждом направлении",
     description:
-      "Камень, дерево, бетон, сталь — каждый материал несёт характер. Мы выбираем то, что со временем становится только лучше.",
+      "Турция, Мальдивы, Байкал, Камчатка — наши менеджеры знают направления изнутри и подберут лучшие отели и маршруты.",
   },
   {
-    title: "Долговечность над трендом",
-    description: "Тренды уходят через пять лет. Наши здания стоят пятьдесят. Мы создаём архитектуру, которой будут гордиться следующие поколения.",
+    title: "Поддержка 24/7 в поездке",
+    description: "Вы не останетесь один на один с проблемой. На весь период путешествия у вас есть прямой контакт с вашим менеджером.",
   },
 ]
 
@@ -53,11 +53,11 @@ export function Philosophy() {
         <div className="grid lg:grid-cols-2 gap-16 lg:gap-24">
           {/* Left column - Title and image */}
           <div className="lg:sticky lg:top-32 lg:self-start">
-            <p className="text-muted-foreground text-sm tracking-[0.3em] uppercase mb-6">Наша философия</p>
+            <p className="text-muted-foreground text-sm tracking-[0.3em] uppercase mb-6">Почему Delta Travel</p>
             <h2 className="text-6xl md:text-6xl font-medium leading-[1.15] tracking-tight mb-6 text-balance lg:text-8xl">
-              Строим
+              Мы с вами
               <br />
-              с <HighlightedText>душой</HighlightedText>
+              от и <HighlightedText>до</HighlightedText>
             </h2>
 
             <div className="relative hidden lg:block">
@@ -72,7 +72,7 @@ export function Philosophy() {
           {/* Right column - Description and Philosophy items */}
           <div className="space-y-6 lg:pt-48">
             <p className="text-muted-foreground text-lg leading-relaxed max-w-md mb-12">
-              За 12 лет мы реализовали более 80 объектов — от частных домов до общественных пространств. И каждый раз задаём себе один вопрос: будет ли здесь хорошо людям?
+              «Delta Travel» — туристическое агентство полного цикла в Вологодской области. Мы работаем с ведущими туроператорами России и помогаем клиентам находить идеальный отдых — от пляжных туров до экспедиций на Камчатку.
             </p>
 
             {philosophyItems.map((item, index) => (

@@ -4,34 +4,34 @@ import { ArrowUpRight } from "lucide-react"
 const projects = [
   {
     id: 1,
-    title: "Вилла «Берёза»",
-    category: "Частный дом · 420 м²",
-    location: "Подмосковье",
-    year: "2024",
+    title: "Турция и Египет",
+    category: "Пляжный отдых · Всё включено",
+    location: "Анталья, Хургада, Шарм-эль-Шейх",
+    year: "от 45 000 ₽",
     image: "/images/hously-1.png",
   },
   {
     id: 2,
-    title: "Офисный центр «Призма»",
-    category: "Коммерческий объект · 3 200 м²",
-    location: "Санкт-Петербург",
-    year: "2024",
+    title: "Европа и ОАЭ",
+    category: "Экскурсионные и городские туры",
+    location: "Испания, Италия, Франция, Дубай",
+    year: "от 89 000 ₽",
     image: "/images/hously-2.png",
   },
   {
     id: 3,
-    title: "Резиденция на берегу",
-    category: "Частный дом · 680 м²",
-    location: "Сочи",
-    year: "2023",
+    title: "Россия и СНГ",
+    category: "Внутренний туризм",
+    location: "Сочи, Крым, Байкал, Камчатка, Алтай",
+    year: "от 28 000 ₽",
     image: "/images/hously-3.png",
   },
   {
     id: 4,
-    title: "Бутик-отель «Норд»",
-    category: "Гостиничный комплекс · 2 800 м²",
-    location: "Казань",
-    year: "2023",
+    title: "Мальдивы и Таиланд",
+    category: "Премиум и экзотика",
+    location: "Мале, Пхукет, Бали, Куба",
+    year: "от 120 000 ₽",
     image: "/images/hously-4.png",
   },
 ]
@@ -68,14 +68,14 @@ export function Projects() {
       <div className="container mx-auto px-6 md:px-12">
         <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-6 mb-16">
           <div>
-            <p className="text-muted-foreground text-sm tracking-[0.3em] uppercase mb-6">Избранные работы</p>
-            <h2 className="text-3xl md:text-4xl lg:text-5xl font-medium tracking-tight">Наши проекты</h2>
+            <p className="text-muted-foreground text-sm tracking-[0.3em] uppercase mb-6">Популярные направления</p>
+            <h2 className="text-3xl md:text-4xl lg:text-5xl font-medium tracking-tight">Куда отправиться</h2>
           </div>
           <a
             href="#"
             className="inline-flex items-center gap-2 text-sm text-muted-foreground hover:text-foreground transition-colors group"
           >
-            Смотреть все проекты
+            Все направления
             <ArrowUpRight className="w-4 h-4 transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
           </a>
         </div>
