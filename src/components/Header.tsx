@@ -1,7 +1,10 @@
 import { useState, useEffect, MouseEvent } from "react"
 import { cn } from "../lib/utils"
+import { useAuth } from "@/lib/auth-context"
+import Icon from "@/components/ui/icon"
 
 export function Header() {
+  const { user } = useAuth()
   const [scrolled, setScrolled] = useState(false)
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
 
@@ -55,17 +58,22 @@ export function Header() {
           ))}
         </ul>
 
-        <a
-          href="#contact"
-          className={cn(
-            "hidden md:inline-flex items-center gap-2 text-sm px-5 py-2.5 transition-all duration-300",
-            scrolled
-              ? "bg-white text-foreground border border-foreground/20 hover:bg-foreground hover:text-white"
-              : "bg-white text-foreground border border-foreground/20 hover:bg-foreground hover:text-white",
+        <div className="hidden md:flex items-center gap-3">
+          {user ? (
+            <a href="/profile" className="inline-flex items-center gap-2 text-sm px-5 py-2.5 bg-white text-foreground border border-foreground/20 hover:bg-foreground hover:text-white transition-all duration-300">
+              <Icon name="User" size={14} />
+              {user.first_name}
+            </a>
+          ) : (
+            <a href="/auth" className="inline-flex items-center gap-2 text-sm px-5 py-2.5 bg-white text-foreground border border-foreground/20 hover:bg-foreground hover:text-white transition-all duration-300">
+              <Icon name="LogIn" size={14} />
+              Войти
+            </a>
           )}
-        >
-          Связаться
-        </a>
+          <a href="#contact" className="inline-flex items-center gap-2 text-sm px-5 py-2.5 bg-[#B8860B] text-white hover:bg-[#9a6f09] transition-all duration-300">
+            Подобрать тур
+          </a>
+        </div>
 
         <button
           className="md:hidden z-50 transition-colors duration-300 text-white"

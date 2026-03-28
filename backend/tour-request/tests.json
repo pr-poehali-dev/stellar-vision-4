@@ -1,0 +1,12 @@
+{
+  "tests": [
+    {
+      "name": "Submit tour request",
+      "method": "POST",
+      "path": "/",
+      "body": {"name": "Тест Тестов", "phone": "+7 900 000 00 00", "destination": "Турция", "adults": 2, "children": 0},
+      "expectedStatus": 200,
+      "bodyMatcher": "partial"
+    }
+  ]
+}
