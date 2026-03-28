@@ -6,7 +6,7 @@ export function Footer() {
           {/* Brand */}
           <div className="md:col-span-2">
             <a href="/" className="inline-block mb-6">
-              <img src="/images/hously-logo.svg" alt="Пространство" width={120} height={32} className="w-auto h-6" />
+              <img src="https://cdn.poehali.dev/projects/561201b8-6f6c-4656-bd73-f78fa78dffa6/bucket/9ed04501-bd1f-40d0-add3-efe7a34d23e6.jpg" alt="Delta Travel" className="w-auto h-14 object-contain" />
             </a>
             <p className="text-muted-foreground leading-relaxed max-w-sm">
               Туристическое агентство «Delta Travel» — ваш надёжный партнёр в путешествиях. Вологодская область, г. Сокольское. Работаем Пн–Пт 9:00–19:00, Сб 10:00–16:00.
